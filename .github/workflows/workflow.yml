@@ -22,4 +22,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: weread
+        env:
+          GIST_ID: ea4fa59c2eb06f3eb1ccff624f9ac28a
+          GT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GT_USER: zhangkesheng
+          WEREAD_COOKIE: ${{ secrets.WEREAD_COOKIE }}
         run: go run ./main.go weread
